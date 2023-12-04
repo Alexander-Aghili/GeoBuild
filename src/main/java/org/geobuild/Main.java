@@ -3,6 +3,7 @@ import hu.supercluster.overpasser.library.output.OutputModificator;
 import hu.supercluster.overpasser.library.output.OutputOrder;
 import hu.supercluster.overpasser.library.output.OutputVerbosity;
 import hu.supercluster.overpasser.library.query.OverpassQuery;
+import org.geobuild.MapFeatures.Coordinates;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -20,6 +21,7 @@ import static org.geobuild.OverpassRequest.*;
 public class Main {
 
     public static void main(String[] args) {
+        Coordinates coordinates = new Coordinates(36.954953, -122.078479, 37.003569, -122.003725);
         String query = new OverpassQuery()
                 .format(JSON)
                 .timeout(30)
@@ -27,8 +29,7 @@ public class Main {
                 .way()
                 .tagRegex("highway", "motorway|trunk|primary|secondary|tertiary|unclassified|residential|living_street|service|road")
                 .boundingBox(
-                        36.954953, -122.078479,
-                        37.003569, -122.003725
+                        coordinates
                 )
                 .end()
                 .output(OutputVerbosity.BODY, OutputModificator.GEOM, OutputOrder.ASC, Integer.MAX_VALUE)
@@ -44,5 +45,6 @@ public class Main {
             return;
         }
         System.out.println(json);
+        new GeoJson(json).saveToFile("Testfile", true);
     }
 }
