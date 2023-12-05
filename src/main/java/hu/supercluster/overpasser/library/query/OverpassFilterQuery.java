@@ -1,6 +1,6 @@
 package hu.supercluster.overpasser.library.query;
 
-import org.geobuild.MapFeatures.Coordinates;
+import org.geobuild.osm.MapFeatures.Coordinates;
 
 import java.util.Set;
 
