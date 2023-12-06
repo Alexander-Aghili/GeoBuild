@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e26dee1e-337b-41d2-83ea-ac4c3a582edb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testfile" beforeDir="false" afterPath="$PROJECT_DIR$/Testfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/supercluster/overpasser/library/query/OverpassFilterQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/supercluster/overpasser/library/query/OverpassFilterQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/geobuild/GeoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/geobuild/osm/GeoJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/geobuild/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/geobuild/osm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/geobuild/MapFeatures/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/geobuild/osm/MapFeatures/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/geobuild/MapFeatures/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/geobuild/osm/MapFeatures/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/geobuild/OverpassRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/geobuild/osm/OverpassRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +76,7 @@
       <workItem from="1701503306481" duration="212000" />
       <workItem from="1701503530967" duration="15288000" />
       <workItem from="1701668216712" duration="5864000" />
-      <workItem from="1701738274461" duration="329000" />
+      <workItem from="1701738274461" duration="3150000" />
     </task>
     <servers />
   </component>
