@@ -37,6 +37,6 @@ public class Main {
             return;
         }
         System.out.println(json);
-        new GeoJson(json).saveToFile("Testfile", true);
+        new GeoJson(json).saveToFile(query, true);
     }
 }
