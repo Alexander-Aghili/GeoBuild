@@ -5,6 +5,9 @@ project(VLP16)
 # Add the path to Google Test
 find_package(GTest REQUIRED)
 
+# Find spdlog package
+find_package(spdlog REQUIRED)
+
 # Source files
 set(SOURCES
     main/App.cpp
@@ -31,13 +34,13 @@ add_library(VLP16Library STATIC ${SOURCES} ${HEADERS})
 add_executable(VLP16Executable main/main.cpp)
 
 # Link the main executable with the library
-target_link_libraries(VLP16Executable PRIVATE VLP16Library)
+target_link_libraries(VLP16Executable PRIVATE VLP16Library spdlog::spdlog)
 
 # Create the test executable
 add_executable(VLP16Tests tests/test_main.cpp ${TEST_SOURCES})
 
 # Link the test executable with Google Test and the library
-target_link_libraries(VLP16Tests PRIVATE VLP16Library GTest::gtest GTest::gtest_main)
+target_link_libraries(VLP16Tests PRIVATE VLP16Library GTest::gtest GTest::gtest_main spdlog::spdlog)
 
 # Automatically discover and include all test source files
 file(GLOB TEST_SOURCES tests/*.cpp)
@@ -46,7 +49,7 @@ file(GLOB TEST_SOURCES tests/*.cpp)
 foreach(TEST_SOURCE ${TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_SOURCE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_SOURCE})
-    target_link_libraries(${TEST_NAME} PRIVATE VLP16Library GTest::gtest GTest::gtest_main -Dgtest_disable_pthreads=OFF -g3 -O0 -Wall -DDEBUG -fcheck=all -fbacktrace)
+    target_link_libraries(${TEST_NAME} PRIVATE VLP16Library GTest::gtest GTest::gtest_main spdlog::spdlog -Dgtest_disable_pthreads=OFF -g3 -O0 -Wall -DDEBUG -fcheck=all -fbacktrace)
     add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})
 endforeach()
 

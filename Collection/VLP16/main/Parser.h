@@ -4,23 +4,31 @@
 #include <iostream>
 #include <cstring>
 
+#include <spdlog/spdlog.h>
+
 #define NUM_DATABLOCKS 12
+#define UDP_HEADER 42
+
+#define NUM_DATAPOINTS 32
+#define DATAPOINT 3
+
+#define TOTAL_BYTES 1248
 
 typedef struct {
     uint16_t flag;
     uint16_t azimuth;
-    uint8_t dataPoints[32][3];
+    uint8_t dataPoints[NUM_DATAPOINTS][DATAPOINT];
 } DataBlock;
 
 typedef struct {
-    uint8_t udpHeader[42];
-    DataBlock dataBlocks[12];
+    uint8_t udpHeader[UDP_HEADER];
+    DataBlock dataBlocks[NUM_DATABLOCKS];
     uint32_t timestamp;
     uint16_t factoryBytes;
 } ParsedPacket;
 
 typedef struct {
-    uint8_t rawData[1248];
+    uint8_t rawData[TOTAL_BYTES];
 } NakedPacket;
 
 /**
