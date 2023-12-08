@@ -1,3 +1,6 @@
 [submodule "velodyne"]
 	path = velodyne
 	url = git@github.com:ros-drivers/velodyne.git
+[submodule "velodyne-ros-driver"]
+	path = velodyne-ros-driver
+	url = git@github.com:Alexander-Aghili/velodyne-ros-driver.git
